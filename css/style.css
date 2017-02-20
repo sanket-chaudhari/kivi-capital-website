@@ -446,9 +446,14 @@ template {
   display: none;
 }
 
-body {
+html {
   font-family: "Open Sans", sans-serif;
   color: #4A4A4A;
+}
+
+section, .header-content-wrapper {
+  max-width: 960px;
+  margin: auto;
 }
 
 .header-container {
@@ -460,8 +465,6 @@ body {
 
 .header-content-wrapper {
   height: 100%;
-  margin: auto;
-  max-width: 1280px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -473,7 +476,7 @@ body {
 }
 
 .logo-wrapper img {
-  height: 30px;
+  height: 28px;
   width: auto;
 }
 
@@ -498,4 +501,118 @@ nav ul li a {
 
 nav ul li:first-child {
   margin-left: 0px;
+}
+
+.hero-bg-white-gradient {
+  /* Rectangle 10 Copy: */
+  display: inline-block;
+  position: absolute;
+  height: 600px;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.6) 16%, rgba(255, 255, 255, 0.93) 65%, #FFFFFF 98%);
+}
+
+.hero-bg-image {
+  display: inline-block;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+  background-image: url(../assets/hero-bg-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.hero-section {
+  height: 600px;
+}
+
+.hero-section .hero-content {
+  margin-top: 140px;
+  position: relative;
+  background-color: white;
+  max-width: 260px;
+  border: 3px solid #F2F0FA;
+}
+
+.hero-section .hero-content .hero-content-wrapper {
+  margin-left: 40px;
+  position: relative;
+}
+
+.hero-section .hero-content .hero-content-wrapper .hero-title-icon {
+  background-color: #F2F0FA;
+  width: 64px;
+  padding-top: 25px;
+}
+
+.hero-section .hero-content .hero-content-wrapper .hero-title-icon img {
+  height: auto;
+  width: 100%;
+}
+
+.hero-section .hero-content .hero-content-wrapper .hero-nowrap {
+  white-space: nowrap;
+  width: 100%;
+}
+
+.hero-section .hero-content .hero-content-wrapper .hero-nowrap .hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #7E68C6;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.hero-section .hero-content .hero-content-wrapper .hero-nowrap .hero-title > span.underscore {
+  display: inline-block;
+  height: 6px;
+  width: 30px;
+  margin-left: 20px;
+  background-color: #7E68C6;
+}
+
+.hero-section .hero-content .hero-content-wrapper .hero-nowrap .hero-subtext {
+  white-space: normal;
+  width: 600px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.hero-section .hero-content .hero-content-wrapper .button {
+  display: inline-block;
+  font-family: inherit;
+  position: relative;
+  padding: 14px 30px;
+  top: 27px;
+  margin-left: 5px;
+  background-color: #F2F0FA;
+}
+
+.hero-section .hero-content .hero-content-wrapper .button .shifted-bg {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: transparent;
+  border: 1px solid #7E68C6;
+}
+
+.hero-section .hero-content .hero-content-wrapper .button label {
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #7E68C6;
+  text-transform: uppercase;
+  line-height: 12px;
+  font-family: inherit;
+  top: -5px;
+  left: -5px;
 }
