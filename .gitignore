@@ -1,3 +1,5 @@
-css/*.scss
+css/*.sass
 *.jade
 prepros.cfg
+bulma/
+css/normalize.css
