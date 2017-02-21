@@ -589,7 +589,7 @@ nav ul li:first-child {
   display: inline-block;
   top: 20px;
   background-color: transparent;
-  transition: background-color 0.1s ease-in-out 0.2s;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .hero-section .hero-content .hero-content-wrapper .button .shifted-bg {
@@ -611,7 +611,7 @@ nav ul li:first-child {
   line-height: 12px;
   color: #7E68C6;
   margin: 14px 30px;
-  transition: color 0.1s ease-in-out 0.2s;
+  transition: color 0.1s ease-in-out;
 }
 
 .hero-section .hero-content .hero-content-wrapper .button:hover {
