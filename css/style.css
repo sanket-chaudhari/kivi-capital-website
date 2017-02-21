@@ -504,12 +504,11 @@ nav ul li:first-child {
 }
 
 .hero-bg-white-gradient {
-  /* Rectangle 10 Copy: */
   display: inline-block;
   position: absolute;
   height: 600px;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
   background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.6) 16%, rgba(255, 255, 255, 0.93) 65%, #FFFFFF 98%);
 }
 
@@ -518,7 +517,7 @@ nav ul li:first-child {
   height: 600px;
   width: 100%;
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   background-image: url(../assets/hero-bg-image.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -535,6 +534,7 @@ nav ul li:first-child {
   background-color: white;
   max-width: 260px;
   border: 3px solid #F2F0FA;
+  z-index: 1;
 }
 
 .hero-section .hero-content .hero-content-wrapper {
@@ -580,39 +580,48 @@ nav ul li:first-child {
   width: 600px;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .hero-section .hero-content .hero-content-wrapper .button {
-  display: inline-block;
-  font-family: inherit;
+  border: 1px solid #7E68C6;
   position: relative;
-  padding: 14px 30px;
-  top: 27px;
-  margin-left: 5px;
-  background-color: #F2F0FA;
+  display: inline-block;
+  top: 20px;
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out 0.2s;
 }
 
 .hero-section .hero-content .hero-content-wrapper .button .shifted-bg {
-  display: inline-block;
+  position: absolute;
+  background-color: #F2F0FA;
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  background-color: transparent;
-  border: 1px solid #7E68C6;
+  transform: translate(4px, 4px);
+  z-index: -1;
+  transition: transform 0.1s ease-in-out;
 }
 
 .hero-section .hero-content .hero-content-wrapper .button label {
-  position: relative;
+  display: inline-block;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 3px;
-  color: #7E68C6;
   text-transform: uppercase;
+  letter-spacing: 3px;
   line-height: 12px;
-  font-family: inherit;
-  top: -5px;
-  left: -5px;
+  color: #7E68C6;
+  margin: 14px 30px;
+  transition: color 0.1s ease-in-out 0.2s;
+}
+
+.hero-section .hero-content .hero-content-wrapper .button:hover {
+  background-color: #7E68C6;
+}
+
+.hero-section .hero-content .hero-content-wrapper .button:hover .shifted-bg {
+  transform: translate(0px, 0px);
+}
+
+.hero-section .hero-content .hero-content-wrapper .button:hover label {
+  color: white;
 }
